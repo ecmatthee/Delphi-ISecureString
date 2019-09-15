@@ -31,7 +31,7 @@
   improvemenst in its current form (ex. hashing of data)
 }
 
-unit SecureString;
+unit SecureString_u;
 
 interface
 
@@ -80,7 +80,9 @@ begin
   begin
     I := PInteger(PByte(FData) - 8)^;
     if (I > -1) and (I < 2) then
-      ZeroMemory(Pointer(FData), System.Length(FData) * SizeOf(Char));
+      begin
+        ZeroMemory(Pointer(FData), System.Length(FData) * SizeOf(Char));
+      end;
   end;
   inherited Destroy;
 end;
@@ -117,7 +119,9 @@ begin
   begin
     I := PInteger(PByte(S) - 8)^;
     if (I > -1) and (I < 2) then
-      ZeroMemory(Pointer(S), System.Length(S) * SizeOf(Char));
+      begin
+        ZeroMemory(Pointer(S), System.Length(S) * SizeOf(Char));
+      end;
   end;
 end;
 
