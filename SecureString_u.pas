@@ -21,7 +21,7 @@
 }
 
 {
-  Official repository can be found at https://github.com/Goldleader-1/Delphi-ISecureString
+  Official repository can be found at https://github.com/ecmatthee/Delphi-ISecureString
 }
 
 {
